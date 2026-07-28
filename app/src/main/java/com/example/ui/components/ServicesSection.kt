@@ -48,6 +48,9 @@ import com.example.ui.theme.LimeGreenContainer
 import com.example.ui.theme.OnLimeGreenContainer
 import com.example.viewmodel.PestViewModel
 
+import androidx.compose.material.icons.filled.PhotoCamera
+import androidx.compose.material.icons.filled.Shield
+
 @Composable
 fun ServicesSection(
     viewModel: PestViewModel,
@@ -153,6 +156,37 @@ fun ServiceCardItem(
                 }
 
                 Spacer(modifier = Modifier.height(12.dp))
+
+                // Service Image Placeholder Header
+                Box(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .height(95.dp)
+                        .background(CharcoalDark, RoundedCornerShape(12.dp))
+                        .padding(8.dp),
+                    contentAlignment = Alignment.Center
+                ) {
+                    Column(
+                        horizontalAlignment = Alignment.CenterHorizontally,
+                        verticalArrangement = Arrangement.Center
+                    ) {
+                        Icon(
+                            imageVector = Icons.Default.PhotoCamera,
+                            contentDescription = "Image Placeholder for ${service.title}",
+                            tint = LimeGreenAccent,
+                            modifier = Modifier.size(24.dp)
+                        )
+                        Spacer(modifier = Modifier.height(4.dp))
+                        Text(
+                            text = "[ Image: ${service.title} Treatment ]",
+                            fontSize = 10.sp,
+                            fontWeight = FontWeight.Bold,
+                            color = Color.White.copy(alpha = 0.85f)
+                        )
+                    }
+                }
+
+                Spacer(modifier = Modifier.height(10.dp))
 
                 // Title & Subtitle
                 Text(

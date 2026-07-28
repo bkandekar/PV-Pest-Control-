@@ -895,11 +895,213 @@ h1, h2, h3, h4 {
 
 /* Responsive Breakpoints */
 @media (max-width: 900px) {
-  .hero-grid, .calculator-card, .diagnostic-grid, .comparison-grid, .footer-grid {
+  .hero-grid, .calculator-card, .diagnostic-grid, .comparison-grid, .footer-grid, .before-after-img-grid, .gallery-grid {
     grid-template-columns: 1fr;
   }
 
   .nav-links {
     display: none;
   }
+}
+
+/* ==========================================================================
+   IMAGE PLACEHOLDER STYLES
+   ========================================================================== */
+
+/* Hero Image Placeholder */
+.hero-img-placeholder {
+  background: linear-gradient(135deg, #1C1F22 0%, #292E33 100%);
+  border: 1px dashed var(--color-border-dark);
+  border-radius: var(--radius-lg);
+  padding: 20px;
+  text-align: center;
+  margin-bottom: 16px;
+  position: relative;
+}
+
+.hero-img-placeholder .cam-icon {
+  font-size: 24px;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.hero-img-placeholder .placeholder-title {
+  display: block;
+  font-size: 13px;
+  font-weight: 800;
+  color: var(--color-lime-accent);
+}
+
+.hero-img-placeholder .placeholder-label {
+  display: block;
+  font-size: 11px;
+  color: #94A3B8;
+  margin-top: 4px;
+}
+
+/* Service Card Image Placeholder Header */
+.service-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.service-tag-badge {
+  background-color: var(--color-lime-container);
+  color: var(--color-lime-dark);
+  font-size: 10px;
+  font-weight: 800;
+  padding: 3px 8px;
+  border-radius: 4px;
+  text-transform: uppercase;
+}
+
+.service-img-placeholder {
+  background-color: #1E2226;
+  border: 1px dashed #3F474F;
+  border-radius: var(--radius-md);
+  padding: 18px 10px;
+  text-align: center;
+  margin-bottom: 14px;
+}
+
+.service-img-placeholder .cam-icon {
+  font-size: 18px;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.service-img-placeholder .placeholder-label {
+  font-size: 10px;
+  font-weight: 700;
+  color: #CBD5E1;
+}
+
+/* Diagnostic Result Image Placeholder */
+.diagnostic-img-placeholder {
+  background-color: #171A1C;
+  border: 1px dashed #333A40;
+  border-radius: var(--radius-md);
+  padding: 14px;
+  text-align: center;
+  margin-bottom: 14px;
+}
+
+.diagnostic-img-placeholder .placeholder-label {
+  font-size: 11px;
+  color: #94A3B8;
+  font-weight: 600;
+}
+
+/* Before / After Case Image Placeholder Grid */
+.before-after-img-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.case-img-placeholder {
+  padding: 16px;
+  border-radius: var(--radius-md);
+  text-align: center;
+  position: relative;
+}
+
+.case-img-placeholder.before {
+  background-color: #2B1B1D;
+  border: 1px dashed #7A2E33;
+}
+
+.case-img-placeholder.after {
+  background-color: #1B291E;
+  border: 1px dashed #2E6B39;
+}
+
+.case-img-placeholder .img-badge {
+  display: inline-block;
+  font-size: 9px;
+  font-weight: 800;
+  color: #FF8A80;
+  background-color: rgba(229, 57, 53, 0.2);
+  padding: 2px 6px;
+  border-radius: 3px;
+  margin-bottom: 6px;
+}
+
+.case-img-placeholder .img-badge.green {
+  color: var(--color-lime-accent);
+  background-color: rgba(163, 230, 53, 0.2);
+}
+
+.case-img-placeholder .cam-icon {
+  display: block;
+  font-size: 16px;
+  margin-bottom: 2px;
+}
+
+.case-img-placeholder .placeholder-label {
+  font-size: 10px;
+  color: #CBD5E1;
+  font-weight: 600;
+}
+
+/* Work Proof Gallery Section */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 18px;
+}
+
+.gallery-card {
+  background-color: #FFFFFF;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+
+.gallery-img-placeholder {
+  background-color: var(--color-dark-bg);
+  padding: 30px 14px;
+  text-align: center;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.gallery-img-placeholder .cam-icon {
+  font-size: 24px;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.gallery-img-placeholder .placeholder-label {
+  font-size: 11px;
+  color: var(--color-lime-accent);
+  font-weight: 700;
+}
+
+.gallery-info {
+  padding: 14px;
+}
+
+.gallery-tag {
+  font-size: 9px;
+  font-weight: 800;
+  text-transform: uppercase;
+  background-color: var(--color-lime-container);
+  color: var(--color-lime-dark);
+  padding: 2px 6px;
+  border-radius: 3px;
+}
+
+.gallery-info h4 {
+  font-size: 13px;
+  margin: 6px 0 2px 0;
+  color: var(--color-text-main);
+}
+
+.gallery-info p {
+  font-size: 11px;
+  color: var(--color-text-muted);
 }

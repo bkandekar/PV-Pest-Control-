@@ -59,28 +59,68 @@ const TREATMENTS = [
 
 const SERVICES_LIST = [
   {
-    icon: "🪳",
-    name: "Cockroach Eradication",
-    desc: "100% Odorless herbal gel dots applied inside kitchen hinges, drawers, and electronics without emptying cabinets.",
-    price: "Starts at ₹799"
+    icon: "🐜",
+    name: "General Pest Control",
+    desc: "Complete protection from ants, spiders, silverfish, flies & crawling pests. 100% odorless spray covering kitchen & living areas.",
+    price: "Starts at ₹899",
+    tag: "Most Popular",
+    imgPlaceholder: "General Pest Spray & Inspection"
   },
   {
-    icon: "🐜",
+    icon: "🪵",
     name: "Subterranean Termite Barrier",
-    desc: "Drill-fill-seal subterranean chemical barrier along wall joints + 5 years written warranty certificate.",
-    price: "Starts at ₹2,199"
+    desc: "Deep 12mm drill-fill-seal subterranean chemical barrier along wall joints + 5 years written warranty certificate.",
+    price: "Starts at ₹2,499",
+    tag: "High Damage Risk",
+    imgPlaceholder: "Subterranean Drill-Fill Treatment"
+  },
+  {
+    icon: "🪳",
+    name: "Herbal Cockroach Control",
+    desc: "100% Odorless herbal gel dots applied inside kitchen hinges & cabinets without emptying drawers or interrupting cooking.",
+    price: "Starts at ₹999",
+    tag: "Kitchen Special",
+    imgPlaceholder: "Herbal Gel Dot Application"
   },
   {
     icon: "🛏️",
     name: "Bed Bug Thermal Care",
-    desc: "180°C thermal steam eradication combined with dual chemical treatment destroying eggs & nymphs.",
-    price: "Starts at ₹1,199"
+    desc: "180°C thermal steam eradication combined with dual chemical treatment destroying eggs & nymphs for instant night relief.",
+    price: "Starts at ₹1,499",
+    tag: "Sleep Safe",
+    imgPlaceholder: "180°C Mattress Thermal Steaming"
   },
   {
     icon: "🐀",
     name: "Rodent Control & Exclusion",
-    desc: "Tamper-proof bait boxes, sticky glue boards, pipe entry audits, and ultrasonic repellent placement.",
-    price: "Starts at ₹899"
+    desc: "Tamper-proof bait boxes, sticky glue boards, pipe entry audits, and ultrasonic repellent placement to protect electrical wires.",
+    price: "Starts at ₹1,199",
+    tag: "Commercial & Home",
+    imgPlaceholder: "Bait Station & Pipe Audit"
+  },
+  {
+    icon: "🦟",
+    name: "Mosquito Fogging & Larval Control",
+    desc: "Outdoor thermal smoke fogging combined with drain anti-larval treatment to reduce swarms & prevent Dengue/Malaria.",
+    price: "Starts at ₹1,299",
+    tag: "Health Guard",
+    imgPlaceholder: "Outdoor Thermal Fogging Machine"
+  },
+  {
+    icon: "🪵",
+    name: "Wood Borer Precision Treatment",
+    desc: "Precision syringe chemical injection into wooden furniture holes and oil-based timber penetrating coating to save antique items.",
+    price: "Starts at ₹1,799",
+    tag: "Wood Care",
+    imgPlaceholder: "Wood Timber Syringe Coating"
+  },
+  {
+    icon: "🛡️",
+    name: "Annual AMC Package",
+    desc: "Year-round pest free guarantee with 3-4 scheduled services, priority dispatch, and unlimited free emergency complaint calls.",
+    price: "Starts at ₹3,499",
+    tag: "Best Savings",
+    imgPlaceholder: "365-Day AMC Protection Certificate"
   }
 ];
 
@@ -184,6 +224,15 @@ function showSymptomResult(index) {
   resultBox.innerHTML = `
     <span class="severity-badge">${item.severityLevel}</span>
     <h3 style="color: var(--color-lime-accent); font-size: 20px; margin-bottom: 8px;">${item.identifiedPest}</h3>
+    
+    <!-- Pest Identification Visual Placeholder -->
+    <div class="diagnostic-img-placeholder">
+      <div class="placeholder-overlay">
+        <span class="cam-icon">🔍📷</span>
+        <span class="placeholder-label">[ Image Placeholder: ${item.identifiedPest} Symptom Pattern ]</span>
+      </div>
+    </div>
+
     <p style="font-size: 13px; color: #CBD5E1; margin-bottom: 16px;">${item.symptomDetail}</p>
     
     <div style="background-color: var(--color-dark-surface); padding: 14px; border-radius: 8px; margin-bottom: 16px;">
@@ -277,11 +326,23 @@ function renderServices() {
   const container = document.getElementById("servicesGrid");
   container.innerHTML = SERVICES_LIST.map(s => `
     <div class="service-card">
-      <div class="service-icon">${s.icon}</div>
+      <div class="service-card-header">
+        <span class="service-tag-badge">${s.tag || 'Certified Service'}</span>
+        <div class="service-icon">${s.icon}</div>
+      </div>
+
+      <!-- Service Image Placeholder Box -->
+      <div class="service-img-placeholder">
+        <div class="placeholder-overlay">
+          <span class="cam-icon">📷</span>
+          <span class="placeholder-label">[ Image: ${s.imgPlaceholder} ]</span>
+        </div>
+      </div>
+
       <h3>${s.name}</h3>
       <p>${s.desc}</p>
       <div class="price">${s.price}</div>
-      <button class="btn btn-primary btn-full" onclick="openBookingModal('${s.name}')">Get Quote</button>
+      <button class="btn btn-primary btn-full" onclick="openBookingModal('${s.name}')">Book Inspection</button>
     </div>
   `).join('');
 }
@@ -304,6 +365,8 @@ function renderCaseShowcase(index) {
   const c = CASES[index];
   const container = document.getElementById("showcaseContainer");
   
+  const pestNames = ["Cockroach Infestation", "Subterranean Termite Colony", "Bed Bug Infested Room"];
+
   container.innerHTML = `
     <div class="case-tabs">
       <button class="case-tab-btn ${index === 0 ? 'active' : ''}" onclick="renderCaseShowcase(0)">Cockroaches</button>
@@ -312,6 +375,20 @@ function renderCaseShowcase(index) {
     </div>
 
     <h3 style="font-size: 16px; margin-bottom: 12px;">${c.title}</h3>
+
+    <div class="before-after-img-grid">
+      <div class="case-img-placeholder before">
+        <span class="img-badge">BEFORE TREATMENT</span>
+        <span class="cam-icon">📷</span>
+        <span class="placeholder-label">[ Image Placeholder: Severe ${pestNames[index]} ]</span>
+      </div>
+
+      <div class="case-img-placeholder after">
+        <span class="img-badge green">AFTER PV TREATMENT</span>
+        <span class="cam-icon">📷</span>
+        <span class="placeholder-label">[ Image Placeholder: Zero-Pest Sanitize Surface ]</span>
+      </div>
+    </div>
 
     <div class="before-box">
       <strong>⚠️ BEFORE:</strong> ${c.before}

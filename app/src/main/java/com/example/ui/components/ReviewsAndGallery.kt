@@ -18,6 +18,7 @@ import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.FormatQuote
+import androidx.compose.material.icons.filled.PhotoCamera
 import androidx.compose.material.icons.filled.Star
 import androidx.compose.material.icons.filled.Verified
 import androidx.compose.material3.Card
@@ -234,6 +235,34 @@ fun GalleryCardItem(item: WorkGalleryItem) {
                 .fillMaxWidth()
                 .padding(14.dp)
         ) {
+            // Work Proof Image Placeholder Box
+            Box(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .height(90.dp)
+                    .background(Color(0xFF23282C), RoundedCornerShape(10.dp))
+                    .border(1.dp, Color(0xFF3F474F), RoundedCornerShape(10.dp)),
+                contentAlignment = Alignment.Center
+            ) {
+                Column(horizontalAlignment = Alignment.CenterHorizontally) {
+                    Icon(
+                        imageVector = Icons.Default.PhotoCamera,
+                        contentDescription = "Photo proof for ${item.title}",
+                        tint = LimeGreenAccent,
+                        modifier = Modifier.size(22.dp)
+                    )
+                    Spacer(modifier = Modifier.height(2.dp))
+                    Text(
+                        text = "[ Image: ${item.category} Proof ]",
+                        fontSize = 10.sp,
+                        color = Color.White.copy(alpha = 0.8f),
+                        fontWeight = FontWeight.Medium
+                    )
+                }
+            }
+
+            Spacer(modifier = Modifier.height(10.dp))
+
             Surface(
                 color = LimeGreenAccent,
                 shape = RoundedCornerShape(6.dp)
