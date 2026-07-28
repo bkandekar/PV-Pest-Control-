@@ -81,6 +81,7 @@ object PestDataDefaults {
         PestConcernOption("Rodent Control", 1199, "Baiting, Traps, Entry Sealing & Ultrasonic Management"),
         PestConcernOption("Mosquito Control", 1299, "Thermal Fogging & Anti-Larval Water Treatment"),
         PestConcernOption("Wood Borer Treatment", 1799, "Precision Syringe Chemical Injection & Timber Coating"),
+        PestConcernOption("Bird & Pigeon Netting", 1599, "UV Nylon Balcony Netting & Stainless Steel Spikes"),
         PestConcernOption("Annual AMC Package", 3499, "Full-Year Protection (3 Scheduled Services + Free On-Call visits)")
     )
 
@@ -153,6 +154,15 @@ object PestDataDefaults {
             keyFeatures = listOf("Deep Syringe Injection in Wood Holes", "Oil-Based Timber Penetrating Coating", "Prevents Yellow Powder Accumulation", "Saves Antique & Costly Furniture"),
             tag = "Wood Care",
             iconType = "wood"
+        ),
+        ServicePackage(
+            title = "Bird & Pigeon Netting Control",
+            subtitle = "High-density Garware UV nylon netting & anti-perching spikes for balconies & windows",
+            startingPrice = "₹1,599",
+            warrantyText = "3 Years Netting Warranty",
+            keyFeatures = listOf("High-Density Garware UV-Resistant Nylon Netting", "Stainless Steel Anti-Perching Bird Spikes", "Zero Obstruction to Ventilation & Daylight", "Prevents Pigeon Droppings & Disease Hazards"),
+            tag = "Balcony Special",
+            iconType = "shield"
         ),
         ServicePackage(
             title = "Annual Maintenance Contract (AMC)",

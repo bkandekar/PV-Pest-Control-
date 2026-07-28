@@ -54,6 +54,7 @@ const TREATMENTS = [
   { name: "Anti-Termite Drill-Fill", basePrice: 2200, key: "termite", default: true },
   { name: "Bed Bug Thermal Spray", basePrice: 1200, key: "bedbug", default: false },
   { name: "Rodent Exclusion & Bait", basePrice: 900, key: "rodent", default: false },
+  { name: "Bird & Pigeon Netting", basePrice: 1599, key: "birdnetting", default: false },
   { name: "Annual AMC Package", basePrice: 3500, key: "amc", default: false }
 ];
 
@@ -113,6 +114,14 @@ const SERVICES_LIST = [
     price: "Starts at ₹1,799",
     tag: "Wood Care",
     imgPlaceholder: "Wood Timber Syringe Coating"
+  },
+  {
+    icon: "🕊️",
+    name: "Bird & Pigeon Netting Control",
+    desc: "High-density Garware UV-resistant nylon netting & anti-perching stainless steel spikes for balcony, window, and solar panel protection.",
+    price: "Starts at ₹1,599",
+    tag: "Balcony Special",
+    imgPlaceholder: "UV Garware Netting & Spike Installation"
   },
   {
     icon: "🛡️",
