@@ -417,6 +417,9 @@ function renderReviews() {
   const container = document.getElementById("reviewsGrid");
   container.innerHTML = REVIEWS.map(r => `
     <div class="review-card">
+      <div class="review-img-placeholder">
+        <span class="cam-icon">📷</span>
+      </div>
       <div class="review-stars">${r.stars}</div>
       <div class="review-quote">"${r.text}"</div>
       <div class="review-author">${r.name}</div>
