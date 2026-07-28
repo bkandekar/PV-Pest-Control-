@@ -1105,3 +1105,176 @@ h1, h2, h3, h4 {
   font-size: 11px;
   color: var(--color-text-muted);
 }
+/* ===== IMAGE PLACEHOLDER SYSTEM ===== */
+.hero-img-placeholder,
+.gallery-img-placeholder {
+  border: 2px dashed #A0E426;
+  background: #f4f5f6;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-img-placeholder {
+  min-height: 380px;
+  margin-bottom: 20px;
+}
+
+.gallery-img-placeholder {
+  min-height: 220px;
+  margin-bottom: 12px;
+}
+
+.hero-img-placeholder .placeholder-overlay {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  text-align: center;
+  padding: 20px;
+}
+
+.hero-img-placeholder .cam-icon,
+.gallery-img-placeholder .cam-icon {
+  font-size: 32px;
+  margin-bottom: 6px;
+}
+
+.hero-img-placeholder .placeholder-title {
+  font-family: 'Space Grotesk', 'Plus Jakarta Sans', sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  color: #212529;
+}
+
+.hero-img-placeholder .placeholder-label,
+.gallery-img-placeholder .placeholder-label {
+  font-size: 12px;
+  font-weight: 500;
+  color: #6b7280;
+  max-width: 260px;
+  line-height: 1.4;
+}
+
+/* Subtle hover hint so it's clear these are swappable */
+.hero-img-placeholder:hover,
+.gallery-img-placeholder:hover {
+  border-color: #212529;
+  background: #eef0f1;
+  transition: all 0.25s ease;
+}
+/* ===== DIAGNOSTIC / SERVICE / CASE PLACEHOLDERS ===== */
+.diagnostic-img-placeholder,
+.service-img-placeholder,
+.case-img-placeholder {
+  border: 2px dashed #A0E426;
+  background: #f4f5f6;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.diagnostic-img-placeholder {
+  min-height: 200px;
+  margin-bottom: 16px;
+  background: #2A2E33; /* dark section context */
+}
+
+.service-img-placeholder {
+  min-height: 160px;
+  margin-bottom: 14px;
+}
+
+.case-img-placeholder {
+  min-height: 220px;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.diagnostic-img-placeholder .placeholder-overlay,
+.case-img-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 16px;
+}
+
+.diagnostic-img-placeholder .cam-icon,
+.service-img-placeholder .cam-icon,
+.case-img-placeholder .cam-icon {
+  font-size: 26px;
+  margin-bottom: 6px;
+}
+
+.diagnostic-img-placeholder .placeholder-label,
+.service-img-placeholder .placeholder-label,
+.case-img-placeholder .placeholder-label {
+  font-size: 12px;
+  font-weight: 500;
+  color: #6b7280;
+  max-width: 220px;
+  line-height: 1.4;
+}
+
+.diagnostic-img-placeholder .placeholder-label {
+  color: #9CA3AF; /* lighter for dark bg */
+}
+
+/* Before/After variant badges */
+.before-after-img-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.case-img-placeholder .img-badge {
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  padding: 3px 10px;
+  border-radius: 20px;
+  background: #212529;
+  color: #fff;
+}
+
+.case-img-placeholder .img-badge.green {
+  background: #A0E426;
+  color: #212529;
+}
+
+.service-img-placeholder:hover,
+.case-img-placeholder:hover,
+.diagnostic-img-placeholder:hover {
+  border-color: #ffffff40;
+  transition: all 0.25s ease;
+}
+/* ===== REVIEW CUSTOMER PHOTO PLACEHOLDER ===== */
+.review-img-placeholder {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 2px dashed #A0E426;
+  background: #f4f5f6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 12px;
+}
+
+.review-img-placeholder .cam-icon {
+  font-size: 20px;
+}
+
+.review-img-placeholder:hover {
+  border-color: #212529;
+  transition: all 0.25s ease;
+}
