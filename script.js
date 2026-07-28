@@ -447,6 +447,6 @@ function handleFormSubmit(e) {
   const service = document.getElementById("custService").value;
 
   const text = encodeURIComponent(`New Booking Request from Website:\nName: ${name}\nPhone: ${phone}\nArea: ${area}\nService Needed: ${service}`);
-  window.open(`https://wa.me/919067257872?text=${text}`, '_blank');
+  window.open(`https://wa.me/918329931123?text=${text}`, '_blank');
   closeBookingModal();
 }
