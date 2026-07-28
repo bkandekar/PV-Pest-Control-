@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PV Pest Control Services | Amravati's #1 Safe & Guaranteed Pest Protection</title>
+  <meta name="description" content="100% Guaranteed, odorless, child and pet-safe pest control services in Amravati. Anti-termite, cockroach herbal gel, bed bug thermal care & rodent control. Call 9067257872.">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Top Emergency Dispatch Banner -->
+  <div class="emergency-banner">
+    <div class="container emergency-flex">
+      <div class="live-status">
+        <span class="pulse-dot"></span>
+        <span class="status-text">3 TECHNICIANS ACTIVE ON FIELD IN AMRAVATI NOW</span>
+        <span class="badge-rapid">24/7 RAPID DISPATCH</span>
+      </div>
+      <div class="emergency-actions">
+        <span class="emergency-title">⚡ Severe Infestation? Call Directly:</span>
+        <a href="tel:9067257872" class="btn btn-emergency-call">📞 Call 9067257872</a>
+        <a href="https://wa.me/919067257872?text=Hello%20PV%20Pest%20Control,%20I%20have%20an%20emergency%20pest%20issue" target="_blank" class="btn btn-emergency-wa">💬 WhatsApp Alert</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Navigation Header -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <div class="brand">
+        <div class="logo-icon">🛡️</div>
+        <div class="brand-text">
+          <span class="brand-name">PV PEST CONTROL</span>
+          <span class="brand-sub">AMRAVATI SERVICES</span>
+        </div>
+      </div>
+      <nav class="nav-links">
+        <a href="#hero">Home</a>
+        <a href="#diagnostic">Diagnostic Tool</a>
+        <a href="#calculator">Instant Calculator</a>
+        <a href="#services">Services</a>
+        <a href="#amc">AMC Plans</a>
+        <a href="#reviews">Reviews</a>
+      </nav>
+      <button class="btn btn-primary" onclick="openBookingModal()">Book Inspection</button>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="hero" class="hero-section">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span>🌿 100% Odorless & Govt Approved Safe</span>
+        </div>
+        <h1>Tired of Cockroaches, Termites & Bed Bugs Coming Back Again and Again?</h1>
+        <p class="hero-sub">
+          Get guaranteed, long-lasting, eco-safe eradication — not just a temporary spray. 
+          PV Pest Control brings 15+ years of trusted protection across homes, offices, and industries in Amravati.
+        </p>
+
+        <div class="hero-stats-row">
+          <div class="stat-card">
+            <span class="stat-num">15+</span>
+            <span class="stat-label">Years Experience</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-num">10,000+</span>
+            <span class="stat-label">Homes Protected</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-num">100%</span>
+            <span class="stat-label">Safety Record</span>
+          </div>
+        </div>
+
+        <div class="hero-cta-group">
+          <a href="#calculator" class="btn btn-hero-primary">🧮 Calculate Instant Estimate</a>
+          <button class="btn btn-hero-secondary" onclick="openBookingModal('General Inspection')">📅 Schedule Free Inspection</button>
+        </div>
+      </div>
+
+      <div class="hero-card-widget">
+        <div class="quick-guarantee-card">
+          <h3>⚡ Quick Protection Guarantee</h3>
+          <ul class="guarantee-list">
+            <li>✅ Zero Kitchen Cabinet Emptying Needed</li>
+            <li>✅ Odorless Herbal Gel & Non-Toxic Sprays</li>
+            <li>✅ Up to 5 Years Written Warranty Certificate</li>
+            <li>✅ Govt. Certified & Verified Technicians with ID</li>
+          </ul>
+          <div class="quick-contact-box">
+            <span>Direct Hotline:</span>
+            <a href="tel:9067257872" class="hotline-link">+91 9067257872</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pest Diagnostic Section -->
+  <section id="diagnostic" class="section">
+    <div class="container">
+      <div class="section-header center">
+        <span class="section-tag">INSTANT BUG IDENTIFIER</span>
+        <h2>Identify Your Pest & Threat Level</h2>
+        <p>Select what symptoms or signs you noticed inside your house or commercial space in Amravati:</p>
+      </div>
+
+      <div class="diagnostic-grid">
+        <div class="symptom-selector" id="symptomSelector">
+          <!-- Populated by JS -->
+        </div>
+
+        <div class="diagnostic-result-card" id="diagnosticResult">
+          <!-- Populated by JS -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cost Calculator Section -->
+  <section id="calculator" class="section dark-bg">
+    <div class="container">
+      <div class="section-header center light-text">
+        <span class="section-tag green">TRANSPARENT PRICING</span>
+        <h2>Instant Pest Control Cost Calculator</h2>
+        <p>Calculate exact estimated prices based on your property type, size, and pest requirements:</p>
+      </div>
+
+      <div class="calculator-card">
+        <div class="calc-inputs">
+          <div class="form-group">
+            <label>1. Select Property Type</label>
+            <div class="property-type-pills" id="propertyTypes">
+              <!-- Populated by JS -->
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>2. Property Area (Sq Ft): <span id="areaValDisplay" class="highlight-val">1,200 sq ft</span></label>
+            <input type="range" id="areaSlider" min="300" max="5000" step="100" value="1200">
+            <div class="slider-labels">
+              <span>300 sq ft</span>
+              <span>2,500 sq ft</span>
+              <span>5,000+ sq ft</span>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>3. Select Required Treatment(s)</label>
+            <div class="treatment-checkboxes" id="treatmentList">
+              <!-- Populated by JS -->
+            </div>
+          </div>
+        </div>
+
+        <div class="calc-summary">
+          <h3>Estimate Summary</h3>
+          <div class="summary-line">
+            <span>Base Service Charge:</span>
+            <span id="baseCost">₹1,200</span>
+          </div>
+          <div class="summary-line">
+            <span>Selected Treatments:</span>
+            <span id="treatmentCost">₹800</span>
+          </div>
+          <div class="summary-line discount" id="discountRow">
+            <span>Package Discount (15%):</span>
+            <span id="discountVal">-₹300</span>
+          </div>
+          <hr class="summary-divider">
+          <div class="summary-total">
+            <span>Estimated Total:</span>
+            <span id="totalCost" class="total-price">₹1,700</span>
+          </div>
+          <p class="calc-note">*Final price verified on free physical inspection.</p>
+
+          <button class="btn btn-accent btn-full" onclick="bookCalculatedQuote()">
+            💬 Book This Estimate via WhatsApp
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="section">
+    <div class="container">
+      <div class="section-header center">
+        <span class="section-tag">SPECIALIZED TREATMENTS</span>
+        <h2>Our Core Pest Eradication Services</h2>
+        <p>Targeted solutions for residential, commercial, and industrial properties in Amravati:</p>
+      </div>
+
+      <div class="services-grid" id="servicesGrid">
+        <!-- Populated by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- AMC Matrix Section -->
+  <section id="amc" class="section light-green-bg">
+    <div class="container">
+      <div class="section-header center">
+        <span class="section-tag">YEAR-ROUND SHIELD</span>
+        <h2>Annual Maintenance Contract (AMC) Matrix</h2>
+        <p>Save up to 25% with year-round zero-pest guarantee and unlimited emergency call-outs.</p>
+      </div>
+
+      <div class="amc-table-card">
+        <table class="amc-table" id="amcTable">
+          <thead>
+            <tr>
+              <th>Coverage Feature</th>
+              <th>One-Time Service</th>
+              <th>Quarterly Plan</th>
+              <th class="highlight-col">Annual AMC (Recommended)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Populated by JS -->
+          </tbody>
+        </table>
+        <div class="amc-footer-cta">
+          <button class="btn btn-primary" onclick="openBookingModal('Annual AMC Package')">
+            Enroll in Annual AMC Package (From ₹3,499/Yr)
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Before/After Case Studies -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header center">
+        <span class="section-tag">PROVEN RESULTS</span>
+        <h2>Treatment Results & Impact Showcase</h2>
+        <p>Real severe infestation problems solved across Amravati neighborhoods:</p>
+      </div>
+
+      <div class="showcase-card" id="showcaseContainer">
+        <!-- Populated by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Pain Points vs Solutions -->
+  <section class="section dark-bg">
+    <div class="container">
+      <div class="section-header center light-text">
+        <span class="section-tag green">WHY CHOOSE US</span>
+        <h2>Common Service Frustrations vs. PV Solutions</h2>
+      </div>
+
+      <div class="comparison-grid">
+        <div class="comparison-card negative">
+          <h3>❌ Unreliable Old Services</h3>
+          <ul>
+            <li>"Pests return in 2 weeks after one spray"</li>
+            <li>"Harsh chemical smell & toxic fumes inside home"</li>
+            <li>"Hidden extra charges added after work"</li>
+            <li>"Unverified technicians without identification"</li>
+            <li>"Technicians arrive late or cancel without notice"</li>
+          </ul>
+        </div>
+
+        <div class="comparison-card positive">
+          <h3>✅ PV Pest Control Solutions</h3>
+          <ul>
+            <li>AMC long-term plans & written re-treatment warranty</li>
+            <li>Govt-approved, odorless, child & pet safe formulations</li>
+            <li>Transparent cost calculator with upfront quotes</li>
+            <li>Verified, trained, uniformed team with official ID</li>
+            <li>Guaranteed on-time arrival & scheduling confirmations</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section id="reviews" class="section">
+    <div class="container">
+      <div class="section-header center">
+        <span class="section-tag">VERIFIED REVIEWS</span>
+        <h2>What Amravati Residents Say</h2>
+        <p>Real feedback from homeowners and business managers in local areas:</p>
+      </div>
+
+      <div class="reviews-grid" id="reviewsGrid">
+        <!-- Populated by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-col brand-col">
+        <h3>🛡️ PV Pest Control Services</h3>
+        <p>Amravati's trusted leader in odorless herbal pest management, anti-termite drill-fill protection, bed bug thermal control, and rodent management.</p>
+        <div class="cert-pills">
+          <span>Govt License: MH/AMR/PEST/2012</span>
+          <span>ISO 9001:2015 Certified</span>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contact & Dispatch</h4>
+        <ul class="contact-info">
+          <li>📍 Plot 42, Near Rajapeth Flyover, Amravati, Maharashtra 444601</li>
+          <li>📞 Hotline: <a href="tel:9067257872">+91 9067257872</a></li>
+          <li>💬 WhatsApp: <a href="https://wa.me/919067257872">+91 9067257872</a></li>
+          <li>✉️ Email: support@pvpestcontrolamravati.com</li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Service Coverage Areas</h4>
+        <p class="service-areas">
+          Rajapeth • Badnera Road • Camp Area • Rukmini Nagar • Shyam Nagar • Gadge Nagar • Sai Nagar • Irwin Square • Daryapur Road • Morshi Road
+        </p>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>© 2026 PV Pest Control Services, Amravati. All rights reserved.</p>
+      <p class="credit">Website by ebookcharm Web Services</p>
+    </div>
+  </footer>
+
+  <!-- Booking Modal -->
+  <div class="modal-overlay" id="bookingModal">
+    <div class="modal-card">
+      <button class="modal-close" onclick="closeBookingModal()">✕</button>
+      <h3>📅 Schedule Inspection / Service</h3>
+      <p class="modal-sub">Fast dispatch across Amravati city within 60-90 minutes.</p>
+
+      <form id="bookingForm" onsubmit="handleFormSubmit(event)">
+        <div class="form-group">
+          <label>Your Full Name</label>
+          <input type="text" id="custName" required placeholder="e.g. Rahul Deshmukh">
+        </div>
+
+        <div class="form-group">
+          <label>Phone / WhatsApp Number</label>
+          <input type="tel" id="custPhone" required placeholder="e.g. 9876543210">
+        </div>
+
+        <div class="form-group">
+          <label>Locality / Area in Amravati</label>
+          <input type="text" id="custArea" required placeholder="e.g. Camp Area / Rajapeth">
+        </div>
+
+        <div class="form-group">
+          <label>Selected Pest Service</label>
+          <select id="custService">
+            <option value="Cockroach Control">Cockroach Control (Herbal Gel)</option>
+            <option value="Termite Control">Termite Control (Drill-Fill-Seal)</option>
+            <option value="Bed Bug Treatment">Bed Bug Treatment (Thermal + Chemical)</option>
+            <option value="Rodent Control">Rodent Control & Exclusion</option>
+            <option value="Annual AMC Package">Annual Maintenance Contract (AMC)</option>
+            <option value="General Inspection">General Inspection</option>
+          </select>
+        </div>
+
+        <button type="submit" class="btn btn-accent btn-full">
+          🚀 Send Direct Request on WhatsApp
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

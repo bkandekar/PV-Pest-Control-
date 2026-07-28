@@ -1,0 +1,6 @@
+{
+  "name": "PV Pest Control",
+  "description": "Official app for PV Pest Control Services Amravati. Instant cost calculator, service booking, and eco-friendly treatment packages.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
