@@ -533,6 +533,10 @@ h1, h2, h3, h4 {
   border-radius: var(--radius-md);
 }
 
+.calc-summary h3 {
+  color: #FFFFFF;
+}
+
 .summary-line {
   display: flex;
   justify-content: space-between;
@@ -708,6 +712,10 @@ h1, h2, h3, h4 {
   border-radius: var(--radius-lg);
 }
 
+.comparison-card h3 {
+  color: #FFFFFF;
+}
+
 .comparison-card.negative {
   background-color: rgba(229, 57, 53, 0.1);
   border: 1px solid rgba(229, 57, 53, 0.3);
@@ -743,6 +751,7 @@ h1, h2, h3, h4 {
   border-radius: var(--radius-lg);
   padding: 20px;
   box-shadow: var(--shadow-sm);
+  text-align: center;
 }
 
 .review-stars {
@@ -905,41 +914,10 @@ h1, h2, h3, h4 {
 }
 
 /* ==========================================================================
-   IMAGE PLACEHOLDER STYLES
+   IMAGE PLACEHOLDER SYSTEM (consolidated — single source of truth)
    ========================================================================== */
 
-/* Hero Image Placeholder */
-.hero-img-placeholder {
-  background: linear-gradient(135deg, #1C1F22 0%, #292E33 100%);
-  border: 1px dashed var(--color-border-dark);
-  border-radius: var(--radius-lg);
-  padding: 20px;
-  text-align: center;
-  margin-bottom: 16px;
-  position: relative;
-}
-
-.hero-img-placeholder .cam-icon {
-  font-size: 24px;
-  display: block;
-  margin-bottom: 6px;
-}
-
-.hero-img-placeholder .placeholder-title {
-  display: block;
-  font-size: 13px;
-  font-weight: 800;
-  color: var(--color-lime-accent);
-}
-
-.hero-img-placeholder .placeholder-label {
-  display: block;
-  font-size: 11px;
-  color: #94A3B8;
-  margin-top: 4px;
-}
-
-/* Service Card Image Placeholder Header */
+/* Service card header (icon + tag badge row) */
 .service-card-header {
   display: flex;
   justify-content: space-between;
@@ -957,335 +935,7 @@ h1, h2, h3, h4 {
   text-transform: uppercase;
 }
 
-.service-img-placeholder {
-  background-color: #1E2226;
-  border: 1px dashed #3F474F;
-  border-radius: var(--radius-md);
-  padding: 18px 10px;
-  text-align: center;
-  margin-bottom: 14px;
-}
-
-.service-img-placeholder .cam-icon {
-  font-size: 18px;
-  display: block;
-  margin-bottom: 4px;
-}
-
-.service-img-placeholder .placeholder-label {
-  font-size: 10px;
-  font-weight: 700;
-  color: #CBD5E1;
-}
-
-/* Diagnostic Result Image Placeholder */
-.diagnostic-img-placeholder {
-  background-color: #171A1C;
-  border: 1px dashed #333A40;
-  border-radius: var(--radius-md);
-  padding: 14px;
-  text-align: center;
-  margin-bottom: 14px;
-}
-
-.diagnostic-img-placeholder .placeholder-label {
-  font-size: 11px;
-  color: #94A3B8;
-  font-weight: 600;
-}
-
-/* Before / After Case Image Placeholder Grid */
-.before-after-img-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 12px;
-  margin-bottom: 14px;
-}
-
-.case-img-placeholder {
-  padding: 16px;
-  border-radius: var(--radius-md);
-  text-align: center;
-  position: relative;
-}
-
-.case-img-placeholder.before {
-  background-color: #2B1B1D;
-  border: 1px dashed #7A2E33;
-}
-
-.case-img-placeholder.after {
-  background-color: #1B291E;
-  border: 1px dashed #2E6B39;
-}
-
-.case-img-placeholder .img-badge {
-  display: inline-block;
-  font-size: 9px;
-  font-weight: 800;
-  color: #FF8A80;
-  background-color: rgba(229, 57, 53, 0.2);
-  padding: 2px 6px;
-  border-radius: 3px;
-  margin-bottom: 6px;
-}
-
-.case-img-placeholder .img-badge.green {
-  color: var(--color-lime-accent);
-  background-color: rgba(163, 230, 53, 0.2);
-}
-
-.case-img-placeholder .cam-icon {
-  display: block;
-  font-size: 16px;
-  margin-bottom: 2px;
-}
-
-.case-img-placeholder .placeholder-label {
-  font-size: 10px;
-  color: #CBD5E1;
-  font-weight: 600;
-}
-
-/* Work Proof Gallery Section */
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 18px;
-}
-
-.gallery-card {
-  background-color: #FFFFFF;
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-lg);
-  overflow: hidden;
-  box-shadow: var(--shadow-sm);
-}
-
-.gallery-img-placeholder {
-  background-color: var(--color-dark-bg);
-  padding: 30px 14px;
-  text-align: center;
-  border-bottom: 1px solid var(--color-border);
-}
-
-.gallery-img-placeholder .cam-icon {
-  font-size: 24px;
-  display: block;
-  margin-bottom: 6px;
-}
-
-.gallery-img-placeholder .placeholder-label {
-  font-size: 11px;
-  color: var(--color-lime-accent);
-  font-weight: 700;
-}
-
-.gallery-info {
-  padding: 14px;
-}
-
-.gallery-tag {
-  font-size: 9px;
-  font-weight: 800;
-  text-transform: uppercase;
-  background-color: var(--color-lime-container);
-  color: var(--color-lime-dark);
-  padding: 2px 6px;
-  border-radius: 3px;
-}
-
-.gallery-info h4 {
-  font-size: 13px;
-  margin: 6px 0 2px 0;
-  color: var(--color-text-main);
-}
-
-.gallery-info p {
-  font-size: 11px;
-  color: var(--color-text-muted);
-}
-/* ===== IMAGE PLACEHOLDER SYSTEM ===== */
-.hero-img-placeholder,
-.gallery-img-placeholder {
-  border: 2px dashed #A0E426;
-  background: #f4f5f6;
-  border-radius: 14px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  overflow: hidden;
-}
-
-.hero-img-placeholder {
-  min-height: 380px;
-  margin-bottom: 20px;
-}
-
-.gallery-img-placeholder {
-  min-height: 220px;
-  margin-bottom: 12px;
-}
-
-.hero-img-placeholder .placeholder-overlay {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 8px;
-  text-align: center;
-  padding: 20px;
-}
-
-.hero-img-placeholder .cam-icon,
-.gallery-img-placeholder .cam-icon {
-  font-size: 32px;
-  margin-bottom: 6px;
-}
-
-.hero-img-placeholder .placeholder-title {
-  font-family: 'Space Grotesk', 'Plus Jakarta Sans', sans-serif;
-  font-weight: 700;
-  font-size: 18px;
-  color: #212529;
-}
-
-.hero-img-placeholder .placeholder-label,
-.gallery-img-placeholder .placeholder-label {
-  font-size: 12px;
-  font-weight: 500;
-  color: #6b7280;
-  max-width: 260px;
-  line-height: 1.4;
-}
-
-/* Subtle hover hint so it's clear these are swappable */
-.hero-img-placeholder:hover,
-.gallery-img-placeholder:hover {
-  border-color: #212529;
-  background: #eef0f1;
-  transition: all 0.25s ease;
-}
-/* ===== DIAGNOSTIC / SERVICE / CASE PLACEHOLDERS ===== */
-.diagnostic-img-placeholder,
-.service-img-placeholder,
-.case-img-placeholder {
-  border: 2px dashed #A0E426;
-  background: #f4f5f6;
-  border-radius: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  overflow: hidden;
-}
-
-.diagnostic-img-placeholder {
-  min-height: 200px;
-  margin-bottom: 16px;
-  background: #2A2E33; /* dark section context */
-}
-
-.service-img-placeholder {
-  min-height: 160px;
-  margin-bottom: 14px;
-}
-
-.case-img-placeholder {
-  min-height: 220px;
-  flex-direction: column;
-  gap: 8px;
-  margin-bottom: 10px;
-}
-
-.diagnostic-img-placeholder .placeholder-overlay,
-.case-img-placeholder {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  padding: 16px;
-}
-
-.diagnostic-img-placeholder .cam-icon,
-.service-img-placeholder .cam-icon,
-.case-img-placeholder .cam-icon {
-  font-size: 26px;
-  margin-bottom: 6px;
-}
-
-.diagnostic-img-placeholder .placeholder-label,
-.service-img-placeholder .placeholder-label,
-.case-img-placeholder .placeholder-label {
-  font-size: 12px;
-  font-weight: 500;
-  color: #6b7280;
-  max-width: 220px;
-  line-height: 1.4;
-}
-
-.diagnostic-img-placeholder .placeholder-label {
-  color: #9CA3AF; /* lighter for dark bg */
-}
-
-/* Before/After variant badges */
-.before-after-img-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 12px;
-  margin-bottom: 16px;
-}
-
-.case-img-placeholder .img-badge {
-  font-size: 10px;
-  font-weight: 800;
-  letter-spacing: 0.5px;
-  padding: 3px 10px;
-  border-radius: 20px;
-  background: #212529;
-  color: #fff;
-}
-
-.case-img-placeholder .img-badge.green {
-  background: #A0E426;
-  color: #212529;
-}
-
-.service-img-placeholder:hover,
-.case-img-placeholder:hover,
-.diagnostic-img-placeholder:hover {
-  border-color: #ffffff40;
-  transition: all 0.25s ease;
-}
-/* ===== REVIEW CUSTOMER PHOTO PLACEHOLDER ===== */
-.review-img-placeholder {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  border: 2px dashed #A0E426;
-  background: #f4f5f6;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto 12px;
-}
-
-.review-img-placeholder .cam-icon {
-  font-size: 20px;
-}
-
-.review-img-placeholder:hover {
-  border-color: #212529;
-  transition: all 0.25s ease;
-}
-/* ==========================================================================
-   IMAGE PLACEHOLDER SYSTEM — append this block to the END of your
-   existing styles.css. This does NOT replace your file — I never
-   received your original styles.css, so only the placeholder/image
-   styling is included here. Paste it after everything you already have.
-   ========================================================================== */
-
-/* ---- Shared placeholder box (used before + after images are added) ---- */
+/* Shared box styling for every image slot */
 .hero-img-placeholder,
 .gallery-img-placeholder,
 .diagnostic-img-placeholder,
@@ -1293,7 +943,7 @@ h1, h2, h3, h4 {
 .case-img-placeholder {
   border: 2px dashed #A0E426;
   background: #f4f5f6;
-  border-radius: 12px;
+  border-radius: var(--radius-md);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1301,9 +951,8 @@ h1, h2, h3, h4 {
   overflow: hidden;
 }
 
-/* Once a real <img> is inside, make it fill the box cleanly and
-   the dashed border becomes invisible (border stays only as a
-   fallback if an image fails to load). */
+/* Once a real <img> sits inside, fill the box cleanly.
+   The dashed border remains only as a fallback if an image fails to load. */
 .hero-img-placeholder img,
 .gallery-img-placeholder img,
 .diagnostic-img-placeholder img,
@@ -1317,25 +966,113 @@ h1, h2, h3, h4 {
   border-radius: inherit;
 }
 
+/* Hero */
 .hero-img-placeholder {
   min-height: 380px;
   margin-bottom: 20px;
 }
 
+.hero-img-placeholder .placeholder-overlay {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  text-align: center;
+  padding: 20px;
+}
+
+.hero-img-placeholder .cam-icon {
+  font-size: 32px;
+  margin-bottom: 6px;
+}
+
+.hero-img-placeholder .placeholder-title {
+  font-family: 'Space Grotesk', 'Plus Jakarta Sans', sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  color: #212529;
+}
+
+.hero-img-placeholder .placeholder-label {
+  font-size: 12px;
+  font-weight: 500;
+  color: #6b7280;
+  max-width: 260px;
+  line-height: 1.4;
+}
+
+/* Gallery */
 .gallery-img-placeholder {
   min-height: 220px;
   margin-bottom: 12px;
 }
 
+.gallery-img-placeholder .cam-icon {
+  font-size: 32px;
+  margin-bottom: 6px;
+}
+
+.gallery-img-placeholder .placeholder-label {
+  font-size: 12px;
+  font-weight: 500;
+  color: #6b7280;
+  max-width: 260px;
+  line-height: 1.4;
+}
+
+/* Diagnostic (sits on a dark card, so its own dark bg + lighter label) */
 .diagnostic-img-placeholder {
   min-height: 200px;
   margin-bottom: 16px;
-  background: #2A2E33; /* dark section context */
+  background: #2A2E33;
 }
 
+.diagnostic-img-placeholder .placeholder-overlay {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 16px;
+}
+
+.diagnostic-img-placeholder .cam-icon {
+  font-size: 26px;
+  margin-bottom: 6px;
+}
+
+.diagnostic-img-placeholder .placeholder-label {
+  font-size: 12px;
+  font-weight: 500;
+  color: #9CA3AF;
+  max-width: 220px;
+  line-height: 1.4;
+}
+
+/* Service cards */
 .service-img-placeholder {
   min-height: 160px;
   margin-bottom: 14px;
+}
+
+.service-img-placeholder .cam-icon {
+  font-size: 26px;
+  margin-bottom: 6px;
+}
+
+.service-img-placeholder .placeholder-label {
+  font-size: 12px;
+  font-weight: 500;
+  color: #6b7280;
+  max-width: 220px;
+  line-height: 1.4;
+}
+
+/* Before / After case study grid */
+.before-after-img-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 16px;
 }
 
 .case-img-placeholder {
@@ -1343,7 +1080,6 @@ h1, h2, h3, h4 {
   flex-direction: column;
   gap: 8px;
   margin-bottom: 10px;
-  position: relative;
 }
 
 .case-img-placeholder img {
@@ -1352,11 +1088,25 @@ h1, h2, h3, h4 {
   z-index: 0;
 }
 
-.before-after-img-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 12px;
-  margin-bottom: 16px;
+.case-img-placeholder .placeholder-overlay {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 16px;
+}
+
+.case-img-placeholder .cam-icon {
+  font-size: 26px;
+  margin-bottom: 6px;
+}
+
+.case-img-placeholder .placeholder-label {
+  font-size: 12px;
+  font-weight: 500;
+  color: #6b7280;
+  max-width: 220px;
+  line-height: 1.4;
 }
 
 .case-img-placeholder .img-badge {
@@ -1378,7 +1128,7 @@ h1, h2, h3, h4 {
   color: #212529;
 }
 
-/* ---- Round customer photo (Reviews section) ---- */
+/* Round customer photo (Reviews section) */
 .review-img-placeholder {
   width: 60px;
   height: 60px;
@@ -1392,21 +1142,17 @@ h1, h2, h3, h4 {
   overflow: hidden;
 }
 
-.review-card {
-  text-align: center;
+.review-img-placeholder .cam-icon {
+  font-size: 20px;
 }
 
-/* ---- Hover polish ---- */
-.service-img-placeholder:hover,
-.gallery-img-placeholder:hover,
+/* Hover polish across all placeholder/image boxes */
 .hero-img-placeholder:hover,
+.gallery-img-placeholder:hover,
+.service-img-placeholder:hover,
+.case-img-placeholder:hover,
+.diagnostic-img-placeholder:hover,
 .review-img-placeholder:hover {
   border-color: #212529;
   transition: all 0.25s ease;
-}
-.comparison-card h3 {
-  color: #FFFFFF !important;
-}
-.calc-summary h3 {
-  color: #FFFFFF !important;
 }
