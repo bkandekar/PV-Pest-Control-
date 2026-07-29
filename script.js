@@ -11,7 +11,8 @@ const DIAGNOSTIC_DATA = [
     identifiedPest: "Wood Borers / Subterranean Termites",
     severityLevel: "CRITICAL RISK",
     recommendedService: "Termite Control",
-    solutionSummary: "High-pressure liquid injection & drill-fill-seal subterranean barrier to protect structural wood."
+    solutionSummary: "High-pressure liquid injection & drill-fill-seal subterranean barrier to protect structural wood.",
+    img: "images/diagnostic-woodborer.webp"
   },
   {
     id: "cockroach",
@@ -20,7 +21,8 @@ const DIAGNOSTIC_DATA = [
     identifiedPest: "German Cockroaches",
     severityLevel: "HIGH RISK",
     recommendedService: "Cockroach Control",
-    solutionSummary: "Targeted herbal gel dots & odorless synthetic pyrethroid spray destroying central nests."
+    solutionSummary: "Targeted herbal gel dots & odorless synthetic pyrethroid spray destroying central nests.",
+    img: "images/diagnostic-cockroach.webp"
   },
   {
     id: "bed_bug",
@@ -29,7 +31,8 @@ const DIAGNOSTIC_DATA = [
     identifiedPest: "Bed Bugs (Cimex lectularius)",
     severityLevel: "HIGH RISK",
     recommendedService: "Bed Bug Treatment",
-    solutionSummary: "2-Session high temperature thermal steaming paired with targeted anti-nymph chemical spray."
+    solutionSummary: "2-Session high temperature thermal steaming paired with targeted anti-nymph chemical spray.",
+    img: "images/diagnostic-bedbug.webp"
   },
   {
     id: "rodents",
@@ -38,7 +41,8 @@ const DIAGNOSTIC_DATA = [
     identifiedPest: "Roof Rats / House Mice",
     severityLevel: "CRITICAL RISK",
     recommendedService: "Rodent Control",
-    solutionSummary: "Tamper-proof bait boxes, sticky traps, pipe entry audits, and ultrasonic repellent placement."
+    solutionSummary: "Tamper-proof bait boxes, sticky traps, pipe entry audits, and ultrasonic repellent placement.",
+    img: "images/diagnostic-rodent.webp"
   }
 ];
 
@@ -65,7 +69,8 @@ const SERVICES_LIST = [
     desc: "Complete protection from ants, spiders, silverfish, flies & crawling pests. 100% odorless spray covering kitchen & living areas.",
     price: "Starts at ₹899",
     tag: "Most Popular",
-    imgPlaceholder: "General Pest Spray & Inspection"
+    imgPlaceholder: "General Pest Spray & Inspection",
+    img: "images/service-general.webp"
   },
   {
     icon: "🪵",
@@ -73,7 +78,8 @@ const SERVICES_LIST = [
     desc: "Deep 12mm drill-fill-seal subterranean chemical barrier along wall joints + 5 years written warranty certificate.",
     price: "Starts at ₹2,499",
     tag: "High Damage Risk",
-    imgPlaceholder: "Subterranean Drill-Fill Treatment"
+    imgPlaceholder: "Subterranean Drill-Fill Treatment",
+    img: "images/service-termite.webp"
   },
   {
     icon: "🪳",
@@ -81,7 +87,8 @@ const SERVICES_LIST = [
     desc: "100% Odorless herbal gel dots applied inside kitchen hinges & cabinets without emptying drawers or interrupting cooking.",
     price: "Starts at ₹999",
     tag: "Kitchen Special",
-    imgPlaceholder: "Herbal Gel Dot Application"
+    imgPlaceholder: "Herbal Gel Dot Application",
+    img: "images/service-cockroach.webp"
   },
   {
     icon: "🛏️",
@@ -89,7 +96,8 @@ const SERVICES_LIST = [
     desc: "180°C thermal steam eradication combined with dual chemical treatment destroying eggs & nymphs for instant night relief.",
     price: "Starts at ₹1,499",
     tag: "Sleep Safe",
-    imgPlaceholder: "180°C Mattress Thermal Steaming"
+    imgPlaceholder: "180°C Mattress Thermal Steaming",
+    img: "images/service-bedbug.webp"
   },
   {
     icon: "🐀",
@@ -97,7 +105,8 @@ const SERVICES_LIST = [
     desc: "Tamper-proof bait boxes, sticky glue boards, pipe entry audits, and ultrasonic repellent placement to protect electrical wires.",
     price: "Starts at ₹1,199",
     tag: "Commercial & Home",
-    imgPlaceholder: "Bait Station & Pipe Audit"
+    imgPlaceholder: "Bait Station & Pipe Audit",
+    img: "images/service-rodent.webp"
   },
   {
     icon: "🦟",
@@ -105,7 +114,8 @@ const SERVICES_LIST = [
     desc: "Outdoor thermal smoke fogging combined with drain anti-larval treatment to reduce swarms & prevent Dengue/Malaria.",
     price: "Starts at ₹1,299",
     tag: "Health Guard",
-    imgPlaceholder: "Outdoor Thermal Fogging Machine"
+    imgPlaceholder: "Outdoor Thermal Fogging Machine",
+    img: "images/service-mosquito.webp"
   },
   {
     icon: "🪵",
@@ -113,7 +123,8 @@ const SERVICES_LIST = [
     desc: "Precision syringe chemical injection into wooden furniture holes and oil-based timber penetrating coating to save antique items.",
     price: "Starts at ₹1,799",
     tag: "Wood Care",
-    imgPlaceholder: "Wood Timber Syringe Coating"
+    imgPlaceholder: "Wood Timber Syringe Coating",
+    img: "images/service-woodborer.webp"
   },
   {
     icon: "🕊️",
@@ -121,7 +132,8 @@ const SERVICES_LIST = [
     desc: "High-density Garware UV-resistant nylon netting & anti-perching stainless steel spikes for balcony, window, and solar panel protection.",
     price: "Starts at ₹1,599",
     tag: "Balcony Special",
-    imgPlaceholder: "UV Garware Netting & Spike Installation"
+    imgPlaceholder: "UV Garware Netting & Spike Installation",
+    img: "images/service-birdnetting.webp"
   },
   {
     icon: "🛡️",
@@ -129,7 +141,8 @@ const SERVICES_LIST = [
     desc: "Year-round pest free guarantee with 3-4 scheduled services, priority dispatch, and unlimited free emergency complaint calls.",
     price: "Starts at ₹3,499",
     tag: "Best Savings",
-    imgPlaceholder: "365-Day AMC Protection Certificate"
+    imgPlaceholder: "365-Day AMC Protection Certificate",
+    img: "images/service-amc.webp"
   }
 ];
 
@@ -146,19 +159,25 @@ const CASES = [
     title: "Severe German Cockroach Infestation in Rajendra Colony",
     before: "Over 200+ cockroaches infesting kitchen drawers, sink drains, and microwave electronics.",
     after: "Odorless herbal gel baiting dots applied in hinge corners & appliances without interrupting cooking.",
-    warranty: "6 Months Zero-Cockroach Guarantee"
+    warranty: "6 Months Zero-Cockroach Guarantee",
+    beforeImg: "images/case-cockroach-before.webp",
+    afterImg: "images/case-cockroach-after.webp"
   },
   {
     title: "Subterranean Termite Colony in Shyam Nagar Duplex",
     before: "Mud tubes reaching up to ceiling with hollow teakwood doors and wardrobe destruction.",
     after: "Deep 12mm drill-fill-seal chemical barrier along wall joints + furniture syringe coating.",
-    warranty: "5 Years Written Warranty Certificate"
+    warranty: "5 Years Written Warranty Certificate",
+    beforeImg: "images/case-termite-before.webp",
+    afterImg: "images/case-termite-after.webp"
   },
   {
     title: "Heavy Bed Bug Infestation in Camp Road Hostel",
     before: "Persistent night bites affecting residents across 4 bedrooms in Camp Road hostel.",
     after: "High-pressure 180°C thermal steam eradication followed by dual chemical treatment 7 days apart.",
-    warranty: "100% Elimination Guarantee"
+    warranty: "100% Elimination Guarantee",
+    beforeImg: "images/case-bedbug-before.webp",
+    afterImg: "images/case-bedbug-after.webp"
   }
 ];
 
@@ -167,19 +186,22 @@ const REVIEWS = [
     name: "Ramesh Kulkarni",
     location: "Rajapeth, Amravati",
     stars: "★★★★★",
-    text: "PV Pest Control did anti-termite treatment at my bungalow 2 years ago. Zero termites since then. Very professional team!"
+    text: "PV Pest Control did anti-termite treatment at my bungalow 2 years ago. Zero termites since then. Very professional team!",
+    photo: "images/review-ramesh.webp"
   },
   {
     name: "Priya Deshmukh",
     location: "Rukmini Nagar, Amravati",
     stars: "★★★★★",
-    text: "The cockroach herbal gel treatment is magic. Didn't have to empty my kitchen cabinets at all and odorless!"
+    text: "The cockroach herbal gel treatment is magic. Didn't have to empty my kitchen cabinets at all and odorless!",
+    photo: "images/review-priya.webp"
   },
   {
     name: "Sunil Wankhede",
     location: "Badnera Road, Amravati",
     stars: "★★★★★",
-    text: "Prompt service within 45 minutes of my call. Their technician was uniformed and polite. Highly recommend their AMC plan."
+    text: "Prompt service within 45 minutes of my call. Their technician was uniformed and polite. Highly recommend their AMC plan.",
+    photo: "images/review-sunil.webp"
   }
 ];
 
@@ -233,13 +255,10 @@ function showSymptomResult(index) {
   resultBox.innerHTML = `
     <span class="severity-badge">${item.severityLevel}</span>
     <h3 style="color: var(--color-lime-accent); font-size: 20px; margin-bottom: 8px;">${item.identifiedPest}</h3>
-    
-    <!-- Pest Identification Visual Placeholder -->
+
+    <!-- Pest Identification Visual -->
     <div class="diagnostic-img-placeholder">
-      <div class="placeholder-overlay">
-        <span class="cam-icon">🔍📷</span>
-        <span class="placeholder-label">[ Image Placeholder: ${item.identifiedPest} Symptom Pattern ]</span>
-      </div>
+      <img src="${item.img}" alt="${item.identifiedPest} symptom pattern" loading="lazy">
     </div>
 
     <p style="font-size: 13px; color: #CBD5E1; margin-bottom: 16px;">${item.symptomDetail}</p>
@@ -340,12 +359,9 @@ function renderServices() {
         <div class="service-icon">${s.icon}</div>
       </div>
 
-      <!-- Service Image Placeholder Box -->
+      <!-- Service Image -->
       <div class="service-img-placeholder">
-        <div class="placeholder-overlay">
-          <span class="cam-icon">📷</span>
-          <span class="placeholder-label">[ Image: ${s.imgPlaceholder} ]</span>
-        </div>
+        <img src="${s.img}" alt="${s.name} - PV Pest Control Amravati" loading="lazy">
       </div>
 
       <h3>${s.name}</h3>
@@ -373,8 +389,6 @@ function renderAMC() {
 function renderCaseShowcase(index) {
   const c = CASES[index];
   const container = document.getElementById("showcaseContainer");
-  
-  const pestNames = ["Cockroach Infestation", "Subterranean Termite Colony", "Bed Bug Infested Room"];
 
   container.innerHTML = `
     <div class="case-tabs">
@@ -388,14 +402,12 @@ function renderCaseShowcase(index) {
     <div class="before-after-img-grid">
       <div class="case-img-placeholder before">
         <span class="img-badge">BEFORE TREATMENT</span>
-        <span class="cam-icon">📷</span>
-        <span class="placeholder-label">[ Image Placeholder: Severe ${pestNames[index]} ]</span>
+        <img src="${c.beforeImg}" alt="Before treatment - ${c.title}" loading="lazy">
       </div>
 
       <div class="case-img-placeholder after">
         <span class="img-badge green">AFTER PV TREATMENT</span>
-        <span class="cam-icon">📷</span>
-        <span class="placeholder-label">[ Image Placeholder: Zero-Pest Sanitize Surface ]</span>
+        <img src="${c.afterImg}" alt="After PV Pest Control treatment - ${c.title}" loading="lazy">
       </div>
     </div>
 
@@ -418,7 +430,7 @@ function renderReviews() {
   container.innerHTML = REVIEWS.map(r => `
     <div class="review-card">
       <div class="review-img-placeholder">
-        <span class="cam-icon">📷</span>
+        <img src="${r.photo}" alt="${r.name}" loading="lazy">
       </div>
       <div class="review-stars">${r.stars}</div>
       <div class="review-quote">"${r.text}"</div>
