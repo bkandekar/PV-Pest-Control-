@@ -346,7 +346,7 @@ function bookCalculatedQuote() {
   const sqft = document.getElementById("areaValDisplay").textContent;
   
   const msg = encodeURIComponent(`Hello PV Pest Control, I calculated an instant estimate on your website:\nProperty: ${prop} (${sqft})\nEstimated Price: ${total}\nPlease call me to schedule an inspection.`);
-  window.open(`https://wa.me/919067257872?text=${msg}`, '_blank');
+  window.open(`https://wa.me/918329931123?text=${msg}`, '_blank');
 }
 
 // --- Render Services ---
